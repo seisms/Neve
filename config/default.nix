@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 {
   # Import all your configuration modules here
   imports = [
@@ -38,4 +38,7 @@
   telescope.enable = lib.mkDefault true;
   ui.enable = lib.mkDefault true;
   utils.enable = lib.mkDefault true;
+  plugins.vimtex.enable = true;
+
+  extraPackages = with pkgs; [ cpplint ];
 }

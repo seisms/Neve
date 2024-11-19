@@ -35,6 +35,15 @@
         };
       }
       {
+      	mode = ["n"];
+	key = "<leader>x";
+	action = "<cmd>bd<cr>";
+	options = {
+	  silent = true;
+	  desc = "Close buffer";
+	};
+      }
+      {
         mode = [
           "n"
           "i"
