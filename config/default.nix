@@ -22,13 +22,13 @@
   ];
 
   bufferlines.enable = lib.mkDefault true;
-  colorschemes.enable = lib.mkDefault true;
   completion.enable = lib.mkDefault true;
   dap.enable = lib.mkDefault true;
   filetrees.enable = lib.mkDefault false;
   git.enable = lib.mkDefault true;
   keys.enable = true;
   languages.enable = true;
+  colorschemes.enable = lib.mkDefault true;
   lsp.enable = lib.mkDefault true;
   none-ls.enable = lib.mkDefault false;
   sets.enable = lib.mkDefault true;

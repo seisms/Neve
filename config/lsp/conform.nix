@@ -60,6 +60,7 @@
             stop_after_first = true;
           };
           rust = [ "rustfmt" ];
+	  c = ["clang-format"];
         };
       };
     };
