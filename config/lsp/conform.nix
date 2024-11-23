@@ -17,8 +17,8 @@
                     lspFallback = true;
                 };
                 formatters_by_ft = {
-                    c = [ "clang_format" ];
-                    cpp = [ "clang_format" ];
+                    c = [ "clang-format" ];
+                    cpp = [ "clang-format" ];
                     html = {
                         __unkeyed-1 = "prettierd";
                         __unkeyed-2 = "prettier";
@@ -60,6 +60,7 @@
                     };
                     rust = [ "rustfmt" ];
                 };
+                formatters.clang-format.command = "clang-format";
             };
         };
 
