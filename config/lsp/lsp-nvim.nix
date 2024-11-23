@@ -177,28 +177,6 @@
                 };
                 onAttach = # lua
            '' 
-       -- Helper function to set key mappings more easily
-       local function buf_set_keymap(mode, lhs, rhs, opts)
-         opts = vim.tbl_extend("force", { noremap = true, silent = true, buffer = bufnr }, opts or {})
-         vim.keymap.set(mode, lhs, rhs, opts)
-       end
-
-       buf_set_keymap("n", "<leader>ll",
-         function()
-           if vim.diagnostic.config().virtual_text == false then
-             vim.diagnostic.config({
-               virtual_text = {
-                 source = "always",
-                 prefix = "●",
-               },
-             })
-           else
-             vim.diagnostic.config({
-               virtual_text = false,
-             })
-           end
-         end, { desc = "Toggle Ghost Lsp" })
-
           vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("UserLspConfig", {}),
             callback = function(args)
