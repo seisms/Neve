@@ -38,7 +38,6 @@
   telescope.enable = lib.mkDefault true;
   ui.enable = lib.mkDefault true;
   utils.enable = lib.mkDefault true;
-  plugins.vimtex.enable = true;
 
   extraPackages = with pkgs; [ cpplint ];
 }
